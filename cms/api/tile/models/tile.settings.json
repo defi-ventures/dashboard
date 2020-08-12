@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tiles",
+  "info": {
+    "name": "Tile"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "bg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "secondaryTitle": {
+      "type": "string"
+    },
+    "secondaryUrl": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

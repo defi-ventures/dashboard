@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_button_ctas",
+  "info": {
+    "name": "Cta",
+    "icon": "mouse-pointer"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

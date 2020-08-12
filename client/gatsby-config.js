@@ -7,6 +7,7 @@
 module.exports = {
   /* Your site config here */
   plugins: [
+    'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
@@ -18,7 +19,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: process.env.API_URL || 'http://localhost:1337',
+        apiURL: process.env.CMS_API_URL || 'http://cms:1337',
         contentTypes: [
           'tile',
           'banner',
@@ -34,23 +35,25 @@ module.exports = {
         name: `Tokenizer`,
         short_name: `Tokenizer`,
         start_url: `/`,
+        background_color: `#EEE`,
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.ico`, // This path is relative to the root of the site.
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: 'gatsby-starter-default',
-    //     short_name: 'starter',
-    //     start_url: '/',
-    //     background_color: '#663399',
-    //     theme_color: '#663399',
-    //     display: 'minimal-ui',
-    //   },
-    // },
-    // 'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-stencil`,
+      options: {
+        // The module of your components (required), eg "@ionic/core".
+        module: "@defi-ventures/tokenizer-common",
+
+        // Stencil renderToString options (optional): https://stenciljs.com/docs/hydrate-app#configuration-options
+        renderToStringOptions: {
+          prettyHtml: true,
+        },
+      },
+    },
+    'gatsby-plugin-offline',
   ],
 }

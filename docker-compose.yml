@@ -3,13 +3,15 @@ version: "3"
 services:
   client:
     build:
-      context: .
+      context: ./client/
     restart: unless-stopped
     env_file: .env
     ports: 
-      - "3000:3000"
+      - "9000:9000"
     depends_on:
       - cms
+    working_dir: /app
+    command: ./run.sh
 
   cms:
     image: strapi/strapi
@@ -29,6 +31,7 @@ services:
 
   mongo-cms:
     image: mongo
+    env_file: .env
     restart: unless-stopped
     volumes:
       - db:/data/db

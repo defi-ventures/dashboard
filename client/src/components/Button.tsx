@@ -27,18 +27,18 @@ type Props = {
 const Button: FC<Props> = ({
   children,
   href,
-  onCLick,
+  onClick,
 }) => {
   const clickHandler = () => {
     if (onClick) {
       onClick();
     } else {
-      window.location(href);
+      window.location.href = href;
     }
   }
 
   return (
-    <StyledButton click={ clickHandler }>
+    <StyledButton onClick={ clickHandler }>
       { children }
     </StyledButton>
   );

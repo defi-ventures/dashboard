@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  client:
+  dashboard:
     build:
       context: ./client/
     restart: unless-stopped
@@ -38,3 +38,8 @@ services:
 
 volumes:
   db:
+
+networks:
+  default:
+      external:
+          name: tokenizer-network

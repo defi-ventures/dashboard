@@ -15,6 +15,11 @@ const TileContainer = styled.a`
   color: white;
   text-decoration: none;
   position: relative;
+  margin: 1rem;
+
+  @media(max-width: 600px) {
+    margin: 1rem 0;
+  }
 
   h1, p {
     padding: 0;

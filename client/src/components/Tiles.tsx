@@ -8,7 +8,6 @@ const TilesContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 2rem;
   flex-wrap: wrap;
 `;
 

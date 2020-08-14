@@ -11,7 +11,7 @@ applyPolyfills().then(() => {
 
 const ContentContainer = styled.div`
   padding: 2rem;
-  
+
   > * {
     margin-bottom: 3rem;
   }
@@ -19,6 +19,8 @@ const ContentContainer = styled.div`
   * {
     box-sizing: border-box;
   }
+
+  padding-bottom: 5rem;
 `;
 
 const Layout: FC = ({ children }) => (

@@ -30,6 +30,10 @@ const ArticlesContainer = styled.div`
   flex-wrap: wrap;
   margin: 2rem 0;
   width: 100%;
+
+  @media(min-width: 600px) {
+    justify-content: space-around;
+  }
 `;
 
 const StyledButton = styled(Button)`

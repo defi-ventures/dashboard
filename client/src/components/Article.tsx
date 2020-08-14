@@ -14,7 +14,7 @@ const ArticleContainer = styled.a`
   cursor: pointer;
   text-decoration: none;
   position: relative;
-  margin: 0 0 4rem;
+  margin: 0 1rem 4rem;
 
   h1, p {
     padding: 0;

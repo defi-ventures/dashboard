@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
 import Tiles from '../components/Tiles';
+import Articles from '../components/Articles';
 
 const Home = () => (
   <Layout>
@@ -12,6 +13,7 @@ const Home = () => (
     </Helmet>
     <Banner />
     <Tiles />
+    <Articles />
   </Layout>
 );
 

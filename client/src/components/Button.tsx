@@ -21,24 +21,32 @@ const StyledButton = styled.button`
 
 type Props = {
   onClick?: () => any,
-  href: string,
+  href?: string,
+  disabled?: boolean,
+  className?: string,
 };
 
 const Button: FC<Props> = ({
   children,
   href,
   onClick,
+  disabled,
+  className,
 }) => {
   const clickHandler = () => {
     if (onClick) {
       onClick();
-    } else {
+    } else if (href) {
       window.location.href = href;
     }
   }
 
   return (
-    <StyledButton onClick={ clickHandler }>
+    <StyledButton
+      className={ className } 
+      onClick={ clickHandler } 
+      disabled={ disabled }
+    >
       { children }
     </StyledButton>
   );

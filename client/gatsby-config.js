@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: process.env.CMS_API_URL || 'http://cms:1337',
+        apiURL: process.env.CMS_API_URL || 'http://localhost:1337',
         contentTypes: [
           'tile',
           'banner',
@@ -55,5 +55,11 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-source-medium`,
+      options: {
+        username: `defi-ventures`,
+      },
+    },
   ],
 }

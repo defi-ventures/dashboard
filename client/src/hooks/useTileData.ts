@@ -25,10 +25,8 @@ export type TileData = {
 };
 
 type Query = {
-  data: {
-    allStrapiTile: {
-      nodes: TileData[],
-    },
+  allStrapiTile: {
+    nodes: TileData[],
   },
 };
 
@@ -66,7 +64,7 @@ const query = graphql`
 `;
 
 export default (): TileData[] => {
-  const data = useStaticQuery(query);
+  const data = useStaticQuery<Query>(query);
 
   return data.allStrapiTile.nodes;
 };

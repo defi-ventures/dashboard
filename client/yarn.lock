@@ -1001,9 +1001,9 @@
     to-fast-properties "^2.0.0"
 
 "@defi-ventures/tokenizer-common@^1.0.1":
-  version "1.1.6"
-  resolved "https://npm.pkg.github.com/download/@defi-ventures/tokenizer-common/1.1.6/81d3504df55bb6f2a40083e93c7ed94b50dcf1ea04087c90594ec6777b1c96f6#748c30155c4b85cc30abb416dfbab65c503d6adf"
-  integrity sha512-vGe4x0xUuIQSoOmx8dwkk+gwqC7Xuu7OZCJaHD0l5XDCkSlSN4T63jHPR06CxThQhRcvvQ4/978w8ljJ8bhu1A==
+  version "1.1.7"
+  resolved "https://npm.pkg.github.com/download/@defi-ventures/tokenizer-common/1.1.7/6723bac13dcfcb31451cab5608d6d56db9260426080a42fedd6364572af1730d#11dae666b2d5c6a12c12d4ff9844913830346856"
+  integrity sha512-uG0JipxI7Se/Foe3yDZdEtBCY0AlqB6sMqTTED/+B9bKY+LHrNZWrUHhD2t7G8O2u7BEayFT/cSgZJy89E4SCA==
 
 "@emotion/cache@^10.0.27":
   version "10.0.29"

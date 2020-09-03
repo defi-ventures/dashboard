@@ -4,6 +4,8 @@ export type TileData = {
   id: string,
   title: string,
   description?: string,
+  position: number,
+  separator: boolean,
   url: string,
   active: boolean,
   icon?: {
@@ -45,6 +47,8 @@ const query = graphql`
     active
     url
     description
+    position
+    separator
     icon {
       childImageSharp {
         original {
@@ -68,5 +72,5 @@ const query = graphql`
 export default (): TileData[] => {
   const data = useStaticQuery<Query>(query);
 
-  return data.allStrapiTile.nodes;
+  return data.allStrapiTile.nodes.filter(({ separator }) => !separator);
 };

@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/tokenizer-common",
+      "handler": "tokenizer-common.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tokenizer-common",
+      "handler": "tokenizer-common.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tokenizer-common",
+      "handler": "tokenizer-common.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

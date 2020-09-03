@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "tokenizer_commons",
+  "info": {
+    "name": "Common - Apps Side Menu"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "expand": {
+      "type": "string"
+    },
+    "collapse": {
+      "type": "string"
+    }
+  }
+}

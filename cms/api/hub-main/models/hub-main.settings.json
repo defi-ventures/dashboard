@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "hub_mains",
+  "info": {
+    "name": "Hub - Main"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "appsTitle": {
+      "type": "string"
+    },
+    "articlesTitle": {
+      "type": "string"
+    },
+    "readMore": {
+      "type": "string"
+    },
+    "viewAll": {
+      "type": "string"
+    }
+  }
+}

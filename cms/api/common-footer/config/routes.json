@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/common-footer",
+      "handler": "common-footer.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/common-footer",
+      "handler": "common-footer.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/common-footer",
+      "handler": "common-footer.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

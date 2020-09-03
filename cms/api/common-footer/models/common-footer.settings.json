@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "common_footers",
+  "info": {
+    "name": "Common - Footer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "copy": {
+      "type": "string"
+    },
+    "products": {
+      "type": "string"
+    },
+    "about": {
+      "type": "string"
+    },
+    "resources": {
+      "type": "string"
+    },
+    "social": {
+      "type": "string"
+    }
+  }
+}

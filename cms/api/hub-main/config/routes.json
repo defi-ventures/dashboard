@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/hub-main",
+      "handler": "hub-main.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/hub-main",
+      "handler": "hub-main.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/hub-main",
+      "handler": "hub-main.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

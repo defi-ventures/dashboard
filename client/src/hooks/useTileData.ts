@@ -55,7 +55,7 @@ const query = graphql`
           src
         }
       }
-      publicUrl
+      publicURL
     }
     bg {
       childImageSharp {

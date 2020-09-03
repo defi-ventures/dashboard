@@ -8,7 +8,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       url: String,
       active: Boolean!,
       separator: Boolean!,
-      position: number!,
+      position: Number!,
       icon: File,
       bg: File,
       secondaryTitle: String,

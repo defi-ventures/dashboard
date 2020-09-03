@@ -51,6 +51,7 @@ const query = graphql`
           src
         }
       }
+      publicUrl
     }
     bg {
       childImageSharp {

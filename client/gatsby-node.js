@@ -1,5 +1,5 @@
 exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
+  const { createTypes } = actions;
   const typeDefs = `
     type StrapiTile implements Node {
       id: String!,

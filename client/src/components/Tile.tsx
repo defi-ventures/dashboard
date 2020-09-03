@@ -60,7 +60,7 @@ const Tile: FC<TileData> = ({
 }) => (
   <TileContainer href={ url }>
     <TitleContainer>
-      { icon && <img src={ icon.childImageSharp.original.src } /> }
+      { icon && <img src={ icon.childImageSharp?.original?.src || icon.publicURL } /> }
       <h1>{ title }</h1>
     </TitleContainer>
     <p>{ description }</p>

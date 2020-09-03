@@ -12,6 +12,7 @@ export type TileData = {
         src: string,
       },
     },
+    publicURL: string,
   },
   bg?: {
     childImageSharp: {

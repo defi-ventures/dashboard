@@ -24,16 +24,15 @@ const ContentContainer = styled.div`
 `;
 
 const Layout: FC = ({ children }) => (
-  <tok-main>
-    <div>
-      <tok-header></tok-header>
+  <tok-main has-apps-side-menu>
+    <div className='with-apps-side-menu'>
       <tok-content>
         <ContentContainer>
           { children }
         </ContentContainer>
       </tok-content>
-      {/* <tok-side-menu></tok-side-menu> */}
-      <tok-footer fixed></tok-footer>
+      <tok-apps-side-menu></tok-apps-side-menu>
+      <tok-footer></tok-footer>
     </div>
   </tok-main>
 );

@@ -9,7 +9,7 @@ import Articles from '../components/Articles';
 const Home = () => (
   <Layout>
     <Helmet title='Tokenizer | Apps' defer={false}>
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300;1,500;1,700&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
     </Helmet>
     <Banner />
     <Tiles />

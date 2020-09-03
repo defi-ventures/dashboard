@@ -4,9 +4,11 @@ exports.createSchemaCustomization = ({ actions }) => {
     type StrapiTile implements Node {
       id: String!,
       title: String!,
-      description: String!,
-      url: String!,
+      description: String,
+      url: String,
       active: Boolean!,
+      separator: Boolean!,
+      position: number!,
       icon: File,
       bg: File,
       secondaryTitle: String,

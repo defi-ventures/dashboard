@@ -48,6 +48,15 @@
     },
     "description": {
       "type": "string"
+    },
+    "position": {
+      "type": "integer",
+      "unique": true,
+      "min": 0,
+      "default": 0
+    },
+    "separator": {
+      "type": "boolean"
     }
   }
 }

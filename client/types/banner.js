@@ -10,6 +10,6 @@ module.exports = `
     description: String!,
     cta: Cta!,
     active: Boolean!,
-    background: File,
+    hero: File,
   }
 `;

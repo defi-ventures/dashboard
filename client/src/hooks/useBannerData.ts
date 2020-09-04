@@ -9,7 +9,7 @@ export type BannerData = {
     url: string,
   }
   active: boolean,
-  background: {
+  hero: {
     childImageSharp: {
       original: {
         src: string,
@@ -41,7 +41,7 @@ const query = graphql`
       url
     }
     active
-    background {
+    hero {
       childImageSharp {
         original {
           src

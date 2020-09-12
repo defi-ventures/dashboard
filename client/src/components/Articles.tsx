@@ -5,24 +5,6 @@ import Article from './Article';
 import Button from './Button';
 import useArticleData from '../hooks/useArticleData';
 
-const ArticlesSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 70rem;
-  margin: auto;
-
-  > h1 {
-    font-size: 1.2rem;
-    color: #444;
-    line-height: 2.8rem;
-    width: 100%;
-    border-bottom: 1px solid #EEE;
-    font-weight: 200;
-  }
-`;
-
 const ArticlesContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -40,14 +22,12 @@ const Articles = () => {
   const articles = useArticleData();
 
   return (
-    <ArticlesSection>
-      <ArticlesContainer>
-        { articles.map(article => (
-          <Article key={ article.id } { ...article } />
-        ))}
+    <ArticlesContainer>
+      { articles.map(article => (
+        <Article key={ article.id } { ...article } />
+      ))}
 
-      </ArticlesContainer>
-    </ArticlesSection>
+    </ArticlesContainer>
   );
 };
 

@@ -52,6 +52,7 @@ const Hero = styled.div`
     max-width: 100%;
     max-heigth: 100%;
     margin: auto;
+    display: block;
   }
 `;
 
@@ -75,7 +76,7 @@ const Banner = () => {
         <h1>{ title }</h1>
         <Button href={ cta.url }>{ cta.title }</Button>
       </Copy>
-      <Hero><img src={hero.childImageSharp.original.src} /></Hero>
+      { hero.childImageSharp  && <Hero><img src={hero.childImageSharp?.original?.src} /></Hero> }
     </BannerContainer>
   );
 };

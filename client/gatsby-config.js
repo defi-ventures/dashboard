@@ -24,6 +24,9 @@ module.exports = {
           'tile',
           'banner',
         ],
+        singleTypes: [
+          'hub-main',
+        ],
         queryLimit: 1000,
       },
     },

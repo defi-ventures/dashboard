@@ -29,7 +29,7 @@ type Query = {
 
 const query = graphql`
   query ArticlesQuery {
-    allMediumPost(sort: { fields: [createdAt], order: DESC }) {
+    allMediumPost(limit: 4, sort: { fields: [createdAt], order: DESC }) {
       edges {
         node {
           id

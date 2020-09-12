@@ -1,7 +1,13 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-const StyledButton = styled.button`
+type StyledButtonProps = {
+  disabled?: boolean,
+  className?: string,
+  link?: boolean,
+};
+
+const StyledButton = styled.button<StyledButtonProps>`
   font-size: 1rem;
   line-height: 1.5rem;
   color: var(--white);
@@ -37,12 +43,21 @@ const StyledButton = styled.button`
       background-color: var(--primary2);
     }
   `};
+
+  ${props => props.link && `
+    background-color: transparent;
+    color: var(--grey-dark);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--grey-light);
+    }
+  `};
 `;
 
-type Props = {
+type Props = StyledButtonProps & {
   onClick?: () => any,
   href?: string,
-  disabled?: boolean,
   className?: string,
 };
 
@@ -50,8 +65,7 @@ const Button: FC<Props> = ({
   children,
   href,
   onClick,
-  disabled,
-  className,
+  ...props
 }) => {
   const clickHandler = () => {
     if (onClick) {
@@ -63,9 +77,8 @@ const Button: FC<Props> = ({
 
   return (
     <StyledButton
-      className={ className } 
       onClick={ clickHandler } 
-      disabled={ disabled }
+      { ...props }
     >
       { children }
     </StyledButton>

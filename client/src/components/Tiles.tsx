@@ -33,7 +33,6 @@ const Tiles = () => {
 
   return (
     <TilesSection>
-      <h1>Apps</h1>
       <TilesContainer>
         { tiles.filter(({ active }) => active).map(tile => (
           <Tile key={ tile.id } { ...tile } />

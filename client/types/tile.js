@@ -8,8 +8,8 @@ module.exports = `
     separator: Boolean!,
     position: Int!,
     icon: File,
-    bg: File,
-    secondaryTitle: String,
-    secondaryUrl: String,
+    iconFull: File,
+    primaryLink: Cta,
+    secondaryLink: Cta,
   }
 `;

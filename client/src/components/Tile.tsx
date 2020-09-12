@@ -2,23 +2,32 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 
 import { TileData } from '../hooks/useTileData';
+import Button from './Button';
 
-const TileContainer = styled.a`
-  width: 20rem;
-  height: 10rem;
-  background-color: #202123;
+const TileContainer = styled.div`
+  max-width: 320px;
+  width: 90%;
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  color: white;
-  text-decoration: none;
-  position: relative;
+  color: var(--text);
   margin: 1rem;
+  padding: 14px;
+  box-shadow: 4px 12px 26px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  align-items: flex-start;
 
-  @media(max-width: 600px) {
-    margin: 1rem 0;
+
+  img {
+    height: 4.5rem;
+  }
+
+  @media(max-width: 1200px) {
+    max-width: 290px;
+
+    img {
+      height: 3rem;
+    }
   }
 
   h1, p {
@@ -26,44 +35,48 @@ const TileContainer = styled.a`
     margin: 0;
   }
 
-  p {
-    margin-top: .4rem;
-    font-size: .65rem;
-    text-align: center;
-    color: #DDD;
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    font-weigth: bold;
+    margin-top: 1rem;
   }
 
-  &:hover h1 {
-    color: orange;
+  p {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
   }
 `;
 
-const TitleContainer = styled.div`
+const ButtonsContainer = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  position: relative;
+  justify-content: space-between;
 
-  img {
-    width: 2rem;
-    height: 2rem;
-    position: absolute;
-    left: -3rem;
+  button {
+    width: 47%;
   }
 `;
 
 const Tile: FC<TileData> = ({
   title,
   description,
-  icon,
-  url,
+  iconFull,
+  primaryLink,
+  secondaryLink,
 }) => (
-  <TileContainer href={ url }>
-    <TitleContainer>
-      { icon && <img src={ icon.childImageSharp?.original?.src || icon.publicURL } /> }
-      <h1>{ title }</h1>
-    </TitleContainer>
+  <TileContainer>
+    { iconFull && <img src={ iconFull.childImageSharp?.original?.src || iconFull.publicURL } /> }
+    <h1>{ title }</h1>
     <p>{ description }</p>
+    <ButtonsContainer>
+      { primaryLink && <Button href={ primaryLink.url }>{ primaryLink.title }</Button> }
+      { secondaryLink && <Button link href={ secondaryLink.url }>{ secondaryLink.title }</Button> }
+    </ButtonsContainer>
   </TileContainer>
 );
 

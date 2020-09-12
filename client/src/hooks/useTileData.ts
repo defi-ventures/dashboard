@@ -16,15 +16,22 @@ export type TileData = {
     },
     publicURL: string,
   },
-  bg?: {
+  iconFull?: {
     childImageSharp: {
       original: {
         src: string,
       },
     },
+    publicURL: string,
   },
-  secondaryTitle?: string,
-  secondaryUrl?: string,
+  primaryLink: {
+    title: string,
+    url: string,
+  },
+  secondaryLink: {
+    title: string,
+    url: string,
+  },
 };
 
 type Query = {
@@ -57,20 +64,28 @@ const query = graphql`
       }
       publicURL
     }
-    bg {
+    iconFull {
       childImageSharp {
         original {
           src
         }
       }
+      publicURL
     }
-    secondaryTitle
-    secondaryUrl
+    primaryLink {
+      title
+      url
+    }
+    secondaryLink {
+      title
+      url
+    }
   }
 `;
 
 export default (): TileData[] => {
   const data = useStaticQuery<Query>(query);
 
+  console.log(data);
   return data.allStrapiTile.nodes.filter(({ separator }) => !separator);
 };

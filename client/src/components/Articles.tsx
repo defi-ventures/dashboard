@@ -36,31 +36,17 @@ const ArticlesContainer = styled.div`
   }
 `;
 
-const StyledButton = styled(Button)`
-  font-size: 1.4rem;
-  padding: 1rem 3rem;
-`;
-
-const LoadMoreIncrements = 8;
-
 const Articles = () => {
-  const [last, setLast] = useState(LoadMoreIncrements);
   const articles = useArticleData();
 
   return (
     <ArticlesSection>
-      <h1>Trending</h1>
       <ArticlesContainer>
-        { articles.slice(0, last).map(article => (
+        { articles.map(article => (
           <Article key={ article.id } { ...article } />
         ))}
 
       </ArticlesContainer>
-      { articles.length > last && (
-        <StyledButton onClick={() => setLast(last + LoadMoreIncrements)}>
-          Load More
-        </StyledButton>
-      )}
     </ArticlesSection>
   );
 };

@@ -22,7 +22,7 @@
       "plugin": "upload",
       "required": false
     },
-    "bg": {
+    "iconFull": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -40,12 +40,6 @@
       "default": true,
       "required": true
     },
-    "secondaryTitle": {
-      "type": "string"
-    },
-    "secondaryUrl": {
-      "type": "string"
-    },
     "description": {
       "type": "string"
     },
@@ -57,6 +51,16 @@
     },
     "separator": {
       "type": "boolean"
+    },
+    "primaryLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.cta"
+    },
+    "secondaryLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.cta"
     }
   }
 }

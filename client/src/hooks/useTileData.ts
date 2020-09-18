@@ -5,7 +5,7 @@ export type TileData = {
   title: string,
   description?: string,
   position: number,
-  separator: boolean,
+  separator?: boolean,
   url: string,
   active: boolean,
   icon?: {
@@ -86,6 +86,5 @@ const query = graphql`
 export default (): TileData[] => {
   const data = useStaticQuery<Query>(query);
 
-  console.log(data);
   return data.allStrapiTile.nodes.filter(({ separator }) => !separator);
 };

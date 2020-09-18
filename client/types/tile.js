@@ -5,7 +5,7 @@ module.exports = `
     description: String,
     url: String,
     active: Boolean!,
-    separator: Boolean!,
+    separator: Boolean,
     position: Int!,
     icon: File,
     iconFull: File,

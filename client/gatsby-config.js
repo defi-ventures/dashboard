@@ -26,6 +26,7 @@ module.exports = {
         ],
         singleTypes: [
           'hub-main',
+          'issue-landing',
         ],
         queryLimit: 1000,
       },

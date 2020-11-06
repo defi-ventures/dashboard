@@ -8,6 +8,10 @@ export type BannerData = {
     title: string,
     url: string,
   }
+  secondaryCta?: {
+    title: string,
+    url: string,
+  }
   active: boolean,
   hero: {
     childImageSharp: {

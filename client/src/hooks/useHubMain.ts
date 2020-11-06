@@ -1,10 +1,12 @@
 import { useStaticQuery, graphql } from 'gatsby';
+import { BannerData } from './useBannerData';
 
 export type HubMain = {
   appsTitle: string,
   articlesTitle: string,
   readMore: string,
   viewAll: string,
+  banner: BannerData,
 };
 
 type Query = {
@@ -22,6 +24,23 @@ const query = graphql`
     articlesTitle
     viewAll
     readMore
+    banner {
+      id
+      title
+      description
+      cta {
+        title
+        url
+      }
+      active
+      hero {
+        childImageSharp {
+          original {
+            src
+          }
+        }
+      }
+    }
   }
 `;
 

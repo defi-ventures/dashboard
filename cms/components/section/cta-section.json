@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_section_cta_sections",
+  "info": {
+    "name": "Cta Section",
+    "icon": "grip-vertical"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "position": {
+      "type": "integer"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": true,
+      "component": "button.cta"
+    }
+  }
+}

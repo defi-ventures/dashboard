@@ -21,17 +21,11 @@
     "copy": {
       "type": "string"
     },
-    "products": {
-      "type": "string"
-    },
-    "about": {
-      "type": "string"
-    },
-    "resources": {
-      "type": "string"
-    },
-    "social": {
-      "type": "string"
+    "section": {
+      "type": "component",
+      "repeatable": true,
+      "component": "section.cta-section",
+      "required": true
     }
   }
 }

@@ -20,6 +20,9 @@
     },
     "viewAll": {
       "type": "string"
+    },
+    "banner": {
+      "model": "banners"
     }
   }
 }

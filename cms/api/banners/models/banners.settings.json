@@ -34,6 +34,11 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "secondaryCta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.cta"
     }
   }
 }

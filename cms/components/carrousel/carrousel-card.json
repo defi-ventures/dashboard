@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_carrousel_carrousel_cards",
+  "info": {
+    "name": "carrouselCard",
+    "icon": "images"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "position": {
+      "type": "integer",
+      "required": true,
+      "unique": true,
+      "default": 0
+    }
+  }
+}

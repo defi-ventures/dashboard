@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "issue_landings",
+  "info": {
+    "name": "Issue - Landing"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "banner": {
+      "model": "banners"
+    },
+    "mainBenefitsSection": {
+      "type": "string",
+      "required": true
+    },
+    "benefits": {
+      "type": "component",
+      "repeatable": true,
+      "component": "card.simple-card"
+    },
+    "carrouselCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "carrousel.carrousel-card"
+    },
+    "ctaTitle": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.cta"
+    }
+  }
+}

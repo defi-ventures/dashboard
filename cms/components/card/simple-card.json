@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_card_simple_cards",
+  "info": {
+    "name": "simpleCard",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "position": {
+      "type": "integer",
+      "required": true,
+      "unique": true,
+      "default": 0
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

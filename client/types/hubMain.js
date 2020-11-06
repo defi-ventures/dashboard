@@ -4,5 +4,6 @@ module.exports = `
     articlesTitle: String!
     readMore: String!
     viewAll: String!
+    banner: StrapiBanner!
   }
 `;

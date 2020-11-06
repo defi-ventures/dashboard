@@ -9,6 +9,7 @@ module.exports = `
     title: String!,
     description: String!,
     cta: Cta!,
+    secondaryCta: Cta,
     active: Boolean!,
     hero: File,
   }

@@ -36,12 +36,12 @@ const ContentContainer = styled.div`
 `;
 
 const Layout: FC = ({ children }) => (
-  <tok-main has-apps-side-menu>
+  <tok-main>
     <Helmet title='Tokenizer | Hub' defer={false}>
       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300;1,500;1,700&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
     </Helmet>
-    <div className='with-apps-side-menu'>
+    <div>
       <tok-content>
         <ContentContainer>
           { children }

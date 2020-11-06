@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
-import useBannerData from '../hooks/useBannerData';
+import { BannerData } from '../hooks/useBannerData';
 import Button from './Button';
 
 const BannerContainer = styled.div`
@@ -50,16 +50,17 @@ const Hero = styled.div`
 
   img {
     max-width: 100%;
-    max-heigth: 100%;
+    max-height: 100%;
     margin: auto;
     display: block;
   }
 `;
 
-const Banner = () => {
-  const banner = useBannerData();
-  console.log(banner);
+type Props = {
+  banner: BannerData,
+};
 
+const Banner: FC<Props> = ({ banner }) => {
   if (!banner) {
     return null;
   }
@@ -68,6 +69,7 @@ const Banner = () => {
     title,
     hero,
     cta,
+    secondaryCta,
   } = banner;
 
   return (
@@ -75,6 +77,7 @@ const Banner = () => {
       <Copy>
         <h1>{ title }</h1>
         <Button href={ cta.url }>{ cta.title }</Button>
+        { secondaryCta && <Button link href={ secondaryCta.url }>{ secondaryCta.title }</Button> }
       </Copy>
       { hero.childImageSharp  && <Hero><img src={hero.childImageSharp?.original?.src} /></Hero> }
     </BannerContainer>

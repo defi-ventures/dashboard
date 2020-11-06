@@ -44,6 +44,10 @@ const query = graphql`
       title
       url
     }
+    secondaryCta {
+      title
+      url
+    }
     active
     hero {
       childImageSharp {
